@@ -1,0 +1,46 @@
+{
+  "name": "janak",
+  "version": "1.0.0",
+  "description": "create vue package with a breeze",
+  "repository": {
+    "url": "git@github.com:vinayakkulkarni/janak.git",
+    "type": "git"
+  },
+  "author": {
+    "name": "Vinayak Kulkarni",
+    "email": "inbox.vinayak@gmail.com",
+    "url": "https://vinayakkulkarni.dev"
+  },
+  "license": "MIT",
+  "bin": "cli.js",
+  "files": [
+    "cli.js",
+    "prompts.js",
+    "saofile.js",
+    "template"
+  ],
+  "scripts": {
+    "test": "ava",
+    "test:snapshot": "ava --update-snapshots",
+    "release": "npm run test && npm run release:prepare",
+    "release:prepare": "shipjs prepare",
+    "release:trigger": "shipjs trigger"
+  },
+  "dependencies": {
+    "cac": "^6.5.8",
+    "chalk": "^4.0.0",
+    "lodash": "^4.17.15",
+    "sao": "^1.7.0"
+  },
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "ava": "^3.8.2",
+    "husky": "^4.2.5",
+    "shipjs": "^0.18.4"
+  },
+  "engines": {
+    "node": ">=10.20.0"
+  }
+}
