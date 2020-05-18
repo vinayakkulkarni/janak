@@ -10,6 +10,11 @@
 
 > Quickly scaffold a new Vue 2.x package (with [@vue/composition-api](https://vue-composition-api-rfc.netlify.app/#api-introduction)) without all the headache of setting it up from scratch
 
+<details><summary>Preview</summary>
+
+![preview](./assets/janak.gif)
+</details>
+
 ## Features
 - _🎉[Composition API](template/_package.json#L32) baked in_
 - _👨‍🔧[TypeScript](template/src/Package.vue#L7) support_
