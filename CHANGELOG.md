@@ -1,3 +1,20 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/vinayakkulkarni/janak/compare/v1.1.0...v1.2.0) (2020-05-18)
+
+
+### Bug Fixes
+
+* **deps:** bump cac from 6.5.8 to 6.5.9 ([5476b2e](https://github.com/vinayakkulkarni/janak/commit/5476b2e))
+* **deps:** bump sao from 1.7.0 to 1.7.1 ([61e7da5](https://github.com/vinayakkulkarni/janak/commit/61e7da5))
+
+
+### Features
+
+* add gif ([19c4c0f](https://github.com/vinayakkulkarni/janak/commit/19c4c0f))
+* **test:** add ava settings ([6f4d1ac](https://github.com/vinayakkulkarni/janak/commit/6f4d1ac))
+
+
+
 <a name="1.1.0"></a>
 # 1.1.0 (2020-05-10)
 
