@@ -20,8 +20,8 @@ if (process.env.TEST === 'e2e') {
 hooks('vue')
   .plugin('vue')
   .push();
-// Setup vue and js files to be processed by `require-extension-hooks-babel`
-hooks(['vue', 'js'])
+// Setup vue, js and ts files to be processed by `require-extension-hooks-babel`
+hooks(['vue', 'js', 'ts'])
   .exclude(({ filename }) => filename.match(/\/node_modules\//))
   .plugin('babel')
   .push();
