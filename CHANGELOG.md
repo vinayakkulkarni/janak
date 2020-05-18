@@ -1,3 +1,13 @@
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/vinayakkulkarni/janak/compare/v1.2.0...v1.2.1) (2020-05-18)
+
+
+### Bug Fixes
+
+* **test:** enable ts in babel hook transpiling ([f8551fd](https://github.com/vinayakkulkarni/janak/commit/f8551fd))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/vinayakkulkarni/janak/compare/v1.1.0...v1.2.0) (2020-05-18)
 
