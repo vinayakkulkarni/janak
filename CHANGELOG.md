@@ -1,3 +1,22 @@
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/vinayakkulkarni/janak/compare/v1.2.1...v1.3.0) (2020-06-10)
+
+
+### Bug Fixes
+
+* **deps:** bump cac from 6.5.9 to 6.5.10 ([bca501a](https://github.com/vinayakkulkarni/janak/commit/bca501a))
+* **deps:** bump chalk from 4.0.0 to 4.1.0 ([492836e](https://github.com/vinayakkulkarni/janak/commit/492836e))
+
+
+### Features
+
+* **badge:** add built using janak badge ([827b9d3](https://github.com/vinayakkulkarni/janak/commit/827b9d3))
+* **dependabot:** use dependabot instead of preview ([3b65455](https://github.com/vinayakkulkarni/janak/commit/3b65455))
+* **prompts:** add fullname option ([13e33b8](https://github.com/vinayakkulkarni/janak/commit/13e33b8))
+* **scripts:** update npm scripts to use prettier ([3510b80](https://github.com/vinayakkulkarni/janak/commit/3510b80))
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/vinayakkulkarni/janak/compare/v1.2.0...v1.2.1) (2020-05-18)
 
