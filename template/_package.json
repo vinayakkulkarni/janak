@@ -7,7 +7,7 @@
     "type": "git"
   },
   "author": {
-    "name": "<%= username %>",
+    "name": "<%= fullname %>",
     "email": "<%= email %>",
     "url": "<%= website %>"
   },

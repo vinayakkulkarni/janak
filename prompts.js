@@ -11,6 +11,11 @@ module.exports = [
     default: 'An awesome package'
   },
   {
+    name: 'fullname',
+    message: 'What is your name?',
+    store: true
+  },
+  {
     name: 'username',
     message: 'What is your GitHub username?',
     default: '{gitUser.name}',
