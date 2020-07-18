@@ -1,3 +1,14 @@
+## [1.4.1](https://github.com/vinayakkulkarni/janak/compare/v1.3.0...v1.4.1) (2020-07-18)
+
+
+### Bug Fixes
+
+* remove useless `cross-spawn` pkg ([6de04c8](https://github.com/vinayakkulkarni/janak/commit/6de04c8be617578823f5150c24bd7183459eaa05))
+* remove useless imports ([8778e68](https://github.com/vinayakkulkarni/janak/commit/8778e6824fe95c88f9f4adad9e29e740c5e1f6ea))
+* update ship.js trigger ([0dc2584](https://github.com/vinayakkulkarni/janak/commit/0dc258485edf8f107c7852dbf414d91fcc633dc6))
+
+
+
 # [1.4.0](https://github.com/vinayakkulkarni/janak/compare/v1.3.0...v1.4.0) (2020-07-18)
 
 
