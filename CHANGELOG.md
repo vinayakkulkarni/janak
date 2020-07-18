@@ -1,3 +1,7 @@
+## [1.4.2](https://github.com/vinayakkulkarni/janak/compare/v1.4.1...v1.4.2) (2020-07-18)
+
+
+
 ## [1.4.1](https://github.com/vinayakkulkarni/janak/compare/v1.3.0...v1.4.1) (2020-07-18)
 
 
