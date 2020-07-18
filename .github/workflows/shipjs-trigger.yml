@@ -1,28 +1,44 @@
 name: Ship js trigger
 on:
-  push:
-    branches:
-      - master
+  pull_request:
+    types:
+      - closed
 jobs:
   build:
     name: Release
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'releases/v')
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          ref: master
+          fetch-depth: 0
+          ref: main
 
-      - name: Setup node env
+      - name: Setup node environment
         uses: actions/setup-node@v1
         with:
-          registry-url: "https://registry.npmjs.org"
+          node-version: 14
+          registry-url: https://registry.npmjs.org
+
+      - name: Get npm cache directory
+        id: npm-cache
+        run: echo "::set-output name=dir::$(npm config get cache)"
+
+      - name: Cache node_modules
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.npm-cache.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: npm install
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm i
 
-      - name: Trigger a new release
-        run: npm run release:trigger
+      - run: npx shipjs trigger
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
