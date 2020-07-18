@@ -29,18 +29,21 @@
   "dependencies": {
     "cac": "^6.5.8",
     "chalk": "^4.0.0",
+    "cross-spawn": "^7.0.3",
+    "glob": "^7.1.6",
     "lodash": "^4.17.15",
-    "sao": "^1.7.0"
+    "sao": "^1.7.0",
+    "validate-npm-package-name": "^3.0.0"
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",
-    "@commitlint/cli": "^9.0.1",
-    "@commitlint/config-conventional": "^9.0.1",
-    "ava": "^3.8.2",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "ava": "^3.10.1",
     "husky": "^4.2.5",
-    "shipjs": "^0.20.0"
+    "shipjs": "^0.20.1"
   },
   "engines": {
-    "node": ">=10.20.0"
+    "node": ">=12.18.2"
   }
 }
