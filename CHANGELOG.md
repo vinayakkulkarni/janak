@@ -1,3 +1,24 @@
+# [1.4.0](https://github.com/vinayakkulkarni/janak/compare/v1.3.0...v1.4.0) (2020-07-18)
+
+
+### Bug Fixes
+
+* **ship.js:** update trigger ([c9ea814](https://github.com/vinayakkulkarni/janak/commit/c9ea81422803d7c549096f9ad79f6cdb53406dd0))
+* update dependabot config ([0173b43](https://github.com/vinayakkulkarni/janak/commit/0173b4346cd6cc80b4796f0da3d7bf4b5c1d09dc))
+* **deps:** bump cac from 6.5.10 to 6.5.12 ([d67ebf6](https://github.com/vinayakkulkarni/janak/commit/d67ebf6cc8f394f2199a4cbfcfb97291396fec21))
+* **deps:** bump cac from 6.5.12 to 6.5.13 ([eb91e98](https://github.com/vinayakkulkarni/janak/commit/eb91e982aec079aeba6a8deee8c4d08d0638d5e1))
+* **deps:** bump cac from 6.5.13 to 6.6.0 ([211e66f](https://github.com/vinayakkulkarni/janak/commit/211e66fd21082fc07424c45a496821e04d45dbe8))
+* **deps:** bump cac from 6.6.0 to 6.6.1 ([4598ad4](https://github.com/vinayakkulkarni/janak/commit/4598ad419a9be1e8fbba5a7add3e09585b60d0aa))
+* **deps:** bump lodash from 4.17.15 to 4.17.19 ([0d0ad68](https://github.com/vinayakkulkarni/janak/commit/0d0ad6890f5f26e947898ee9f5768c22b3eb6972))
+
+
+### Features
+
+* move template to base dir ([85f145e](https://github.com/vinayakkulkarni/janak/commit/85f145e11f2e5226797af7d6c924f0658fa328a4))
+* update saofile and verbose console messages ([123f3c6](https://github.com/vinayakkulkarni/janak/commit/123f3c6a36d4c6d26529c0f788375265800234c5))
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/vinayakkulkarni/janak/compare/v1.2.1...v1.3.0) (2020-06-10)
 
