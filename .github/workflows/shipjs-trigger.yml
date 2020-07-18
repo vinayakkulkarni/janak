@@ -8,19 +8,21 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
         with:
           ref: master
-      - uses: actions/setup-node@v1
+
+      - name: Setup node env
+        uses: actions/setup-node@v1
         with:
           registry-url: "https://registry.npmjs.org"
-      - run: |
-          if [ -f "yarn.lock" ]; then
-            yarn install
-          else
-            npm install
-          fi
-      - run: npm run release:trigger
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Trigger a new release
+        run: npm run release:trigger
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
