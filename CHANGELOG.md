@@ -1,3 +1,12 @@
+## [1.4.3](https://github.com/vinayakkulkarni/janak/compare/v1.4.2...v1.4.3) (2020-07-22)
+
+
+### Features
+
+* use updated rollup babel plugin ([4578e62](https://github.com/vinayakkulkarni/janak/commit/4578e62c5e72140cfb306cb5740f71ec896ca5a2))
+
+
+
 ## [1.4.2](https://github.com/vinayakkulkarni/janak/compare/v1.4.1...v1.4.2) (2020-07-18)
 
 
