@@ -1,4 +1,4 @@
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import vue from 'rollup-plugin-vue';
 
@@ -14,7 +14,6 @@ export default [
     plugins: [
       babel({
         exclude: 'node_modules/**',
-        runtimeHelpers: true,
       }),
       commonjs(),
       vue(),
@@ -32,7 +31,6 @@ export default [
     plugins: [
       babel({
         exclude: 'node_modules/**',
-        runtimeHelpers: true,
       }),
       commonjs(),
       vue(),
@@ -53,7 +51,6 @@ export default [
     plugins: [
       babel({
         exclude: 'node_modules/**',
-        runtimeHelpers: true,
       }),
       commonjs(),
       vue(),
