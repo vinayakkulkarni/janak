@@ -1,3 +1,16 @@
+## [1.4.4](https://github.com/vinayakkulkarni/janak/compare/v1.4.3...v1.4.4) (2020-08-18)
+
+
+### Bug Fixes
+
+* bump pkg versions ([b84ea98](https://github.com/vinayakkulkarni/janak/commit/b84ea9859bc3da9602c999eebe65c4b78e4b8ebd))
+* remove vulnerabilities ([79cbd61](https://github.com/vinayakkulkarni/janak/commit/79cbd619e2607c13099054db8ca86c3ff9813f4a))
+* update tests ([bfa784f](https://github.com/vinayakkulkarni/janak/commit/bfa784fa1dd431856379eefd0455ab0bc3082e7a))
+* update the eslint pattern regex to work on windows based systems ([8dbbfcc](https://github.com/vinayakkulkarni/janak/commit/8dbbfcc6f31d2cbbde1913b6ae0d9dba8efc4dc2))
+* **deps:** bump lodash from 4.17.19 to 4.17.20 ([a67b36a](https://github.com/vinayakkulkarni/janak/commit/a67b36aceac10819308bf53f872a4dfc63ec096c))
+
+
+
 ## [1.4.3](https://github.com/vinayakkulkarni/janak/compare/v1.4.2...v1.4.3) (2020-07-22)
 
 
