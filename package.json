@@ -22,9 +22,13 @@
   "scripts": {
     "test": "ava",
     "test:snapshot": "ava --update-snapshots",
-    "release": "npm run test && npm run release:prepare",
-    "release:prepare": "shipjs prepare",
-    "release:trigger": "shipjs trigger",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lintfix": "npm run lint:eslint:fix && npm run lint:prettier:fix",
+    "lint:eslint": "eslint --ext .js,.ts",
+    "lint:eslint:fix": "eslint --fix --ext .js,.ts",
+    "lint:prettier": "prettier --check \"{,!(node_modules|template)/**/}*.{js,ts}\"",
+    "lint:prettier:fix": "prettier --write \"{,!(node_modules|template)/**/}*.{js,ts}\"",
+    "release": "shipjs prepare",
     "preinstall": "npx npm-force-resolutions"
   },
   "dependencies": {
@@ -39,7 +43,11 @@
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.2",
     "ava": "^3.11.1",
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.2.5",
+    "prettier": "^2.0.5",
     "shipjs": "^0.20.1"
   },
   "resolutions": {
