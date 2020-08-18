@@ -33,6 +33,15 @@ module.exports = {
       },
     ];
 
+    // user wants Vuepress for hosting docs
+    if (this.answers.docs !== false) {
+      actions.push({
+        type: 'add',
+        files: '**',
+        templateDir: 'template/features/docs',
+      });
+    }
+
     return actions;
   },
   async completed() {

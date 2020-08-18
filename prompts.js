@@ -36,4 +36,15 @@ module.exports = [
     filter: (val) => val.toLowerCase(),
     store: true,
   },
+  {
+    name: 'docs',
+    message: 'Would you like to write docs?',
+    type: 'list',
+    pageSize: 10,
+    choices: [
+      { name: 'VuePress', value: 'vuepress' },
+      { name: "I don't write docs", value: false },
+    ],
+    default: false,
+  },
 ];
