@@ -1,17 +1,19 @@
-const { relative } = require('path')
-const validate = require('validate-npm-package-name')
+const { relative } = require('path');
+const validate = require('validate-npm-package-name');
 
 module.exports = {
   prompts: require('./prompts'),
-  actions () {
-    const validation = validate(this.answers.name)
-    validation.warnings && validation.warnings.forEach((warn) => {
-      console.warn('Warning:', warn)
-    })
-    validation.errors && validation.errors.forEach((err) => {
-      console.error('Error:', err)
-    })
-    validation.errors && validation.errors.length && process.exit(1)
+  actions() {
+    const validation = validate(this.answers.name);
+    validation.warnings &&
+      validation.warnings.forEach((warn) => {
+        console.warn('Warning:', warn);
+      });
+    validation.errors &&
+      validation.errors.forEach((err) => {
+        console.error('Error:', err);
+      });
+    validation.errors && validation.errors.length && process.exit(1);
 
     const actions = [
       {
@@ -26,30 +28,32 @@ module.exports = {
           env: '.env',
           // If we use `package.json` directly
           // Then `template` folder will be treated as a package too, which isn't safe
-          '_package.json': 'package.json'
-        }
+          '_package.json': 'package.json',
+        },
       },
-    ]
+    ];
 
-    return actions
+    return actions;
   },
-  async completed () {
-    this.gitInit()
+  async completed() {
+    this.gitInit();
 
-    await this.npmInstall({ npmClient: 'npm' })
+    await this.npmInstall({ npmClient: 'npm' });
 
-    const chalk = this.chalk
-    const isNewFolder = this.outDir !== process.cwd()
-    const relativeOutFolder = relative(process.cwd(), this.outDir)
-    const cdMsg = isNewFolder ? chalk`\t{cyan cd ${relativeOutFolder}}\n` : ''
+    const chalk = this.chalk;
+    const isNewFolder = this.outDir !== process.cwd();
+    const relativeOutFolder = relative(process.cwd(), this.outDir);
+    const cdMsg = isNewFolder ? chalk`\t{cyan cd ${relativeOutFolder}}\n` : '';
 
-    console.log(chalk`\n🎉  {bold Successfully created project} {cyan ${this.answers.name}}\n`)
+    console.log(
+      chalk`\n🎉  {bold Successfully created project} {cyan ${this.answers.name}}\n`,
+    );
 
-    console.log(chalk`  {bold To build & start for production:}\n`)
-    console.log(chalk`${cdMsg}\t{cyan npm run build}`)
-    console.log(chalk`\t{cyan npm run release:prepare}\n`)
+    console.log(chalk`  {bold To build & start for production:}\n`);
+    console.log(chalk`${cdMsg}\t{cyan npm run build}`);
+    console.log(chalk`\t{cyan npm run release:prepare}\n`);
 
-    console.log(chalk`  {bold To test:}\n`)
-    console.log(chalk`${cdMsg}\t{cyan npm run test}\n`)
-  }
-}
+    console.log(chalk`  {bold To test:}\n`);
+    console.log(chalk`${cdMsg}\t{cyan npm run test}\n`);
+  },
+};
