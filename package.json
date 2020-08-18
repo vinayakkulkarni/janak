@@ -24,7 +24,8 @@
     "test:snapshot": "ava --update-snapshots",
     "release": "npm run test && npm run release:prepare",
     "release:prepare": "shipjs prepare",
-    "release:trigger": "shipjs trigger"
+    "release:trigger": "shipjs trigger",
+    "preinstall": "npx npm-force-resolutions"
   },
   "dependencies": {
     "cac": "^6.6.1",
@@ -40,6 +41,9 @@
     "ava": "^3.11.1",
     "husky": "^4.2.5",
     "shipjs": "^0.20.1"
+  },
+  "resolutions": {
+    "dot-prop": "^5.2.0"
   },
   "engines": {
     "node": ">=12.18.2"
