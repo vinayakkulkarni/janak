@@ -40,6 +40,14 @@ module.exports = {
         files: '**',
         templateDir: 'template/features/docs',
       });
+      // If user wants to deploy vuepress docs on
+      if (this.answers.netlify !== false) {
+        actions.push({
+          type: 'add',
+          files: '**',
+          templateDir: 'template/features/netlify',
+        });
+      }
     }
 
     return actions;
