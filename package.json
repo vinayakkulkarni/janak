@@ -24,22 +24,26 @@
     "test:snapshot": "ava --update-snapshots",
     "release": "npm run test && npm run release:prepare",
     "release:prepare": "shipjs prepare",
-    "release:trigger": "shipjs trigger"
+    "release:trigger": "shipjs trigger",
+    "preinstall": "npx npm-force-resolutions"
   },
   "dependencies": {
     "cac": "^6.6.1",
     "chalk": "^4.1.0",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.20",
     "sao": "^1.7.1",
     "validate-npm-package-name": "^3.0.0"
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",
-    "@commitlint/cli": "^9.1.1",
-    "@commitlint/config-conventional": "^9.1.1",
-    "ava": "^3.10.1",
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
+    "ava": "^3.11.1",
     "husky": "^4.2.5",
     "shipjs": "^0.20.1"
+  },
+  "resolutions": {
+    "dot-prop": "^5.2.0"
   },
   "engines": {
     "node": ">=12.18.2"
