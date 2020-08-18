@@ -1,3 +1,16 @@
+# [1.5.0](https://github.com/vinayakkulkarni/janak/compare/v1.4.4...v1.5.0) (2020-08-18)
+
+
+### Features
+
+* add support for hosting vuepress docs on netlify ([6a1ed22](https://github.com/vinayakkulkarni/janak/commit/6a1ed222abda9b82aa3d93c8e55da653908ca9cd))
+* add vuepress ([9001414](https://github.com/vinayakkulkarni/janak/commit/9001414bf1828f0cb2f1f643915eb522b1eaef86))
+* **ci:** add `/rebase` action workflow ([ed13061](https://github.com/vinayakkulkarni/janak/commit/ed130615813f922ff9d3abf8cc557ac8b9726e7b))
+* **lint:** add prettier config ([4f18f1c](https://github.com/vinayakkulkarni/janak/commit/4f18f1cb37ba207a0f2075a10b3fd9ea44c19bf2))
+* **lint:** add support for eslint ([50ad335](https://github.com/vinayakkulkarni/janak/commit/50ad335d4394ce184a9fb2011798b327dcb28968))
+
+
+
 ## [1.4.4](https://github.com/vinayakkulkarni/janak/compare/v1.4.3...v1.4.4) (2020-08-18)
 
 
