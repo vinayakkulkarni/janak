@@ -28,8 +28,7 @@
     "lint:eslint:fix": "eslint --fix --ext .js,.ts",
     "lint:prettier": "prettier --check \"{,!(node_modules|template)/**/}*.{js,ts}\"",
     "lint:prettier:fix": "prettier --write \"{,!(node_modules|template)/**/}*.{js,ts}\"",
-    "release": "shipjs prepare",
-    "preinstall": "npx npm-force-resolutions"
+    "release": "shipjs prepare"
   },
   "dependencies": {
     "cac": "^6.6.1",
@@ -49,9 +48,6 @@
     "husky": "^4.2.5",
     "prettier": "^2.0.5",
     "shipjs": "^0.21.0"
-  },
-  "resolutions": {
-    "dot-prop": "^5.2.0"
   },
   "engines": {
     "node": ">=12.18.2"
