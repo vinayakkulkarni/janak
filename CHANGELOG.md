@@ -1,3 +1,14 @@
+## [1.5.1](https://github.com/vinayakkulkarni/janak/compare/v1.5.0...v1.5.1) (2020-09-13)
+
+
+### Bug Fixes
+
+* remove preinstall script ([1d3bedd](https://github.com/vinayakkulkarni/janak/commit/1d3bedd9abbf12aa7f56078164e592a133a663dd))
+* **deps:** bump node-fetch from 2.6.0 to 2.6.1 ([0ce9df6](https://github.com/vinayakkulkarni/janak/commit/0ce9df6e9cc1c4c4ad1c4056f1bf9c80c54234d3))
+* **deps:** update lockfile ([7cbc4fa](https://github.com/vinayakkulkarni/janak/commit/7cbc4fa869b11c6cd2ef9ab0fbd589518d9bddd3))
+
+
+
 # [1.5.0](https://github.com/vinayakkulkarni/janak/compare/v1.4.4...v1.5.0) (2020-08-18)
 
 
