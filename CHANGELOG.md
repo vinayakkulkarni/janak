@@ -1,3 +1,19 @@
+## [1.5.2](https://github.com/vinayakkulkarni/janak/compare/v1.5.1...v1.5.2) (2020-09-14)
+
+
+### Bug Fixes
+
+* **base:** update dependabot config ([123c414](https://github.com/vinayakkulkarni/janak/commit/123c414838c551a90779edf530da5de106eb4b79))
+* update dependabot config file ([3487653](https://github.com/vinayakkulkarni/janak/commit/34876532629078414148dd9ae21ec2c6071de11d))
+
+
+### Features
+
+* **deps:** update internal dependencies ([327a36f](https://github.com/vinayakkulkarni/janak/commit/327a36fcfe486a51468f72d2bbd11835e5467144))
+* **shipjs:** update ship.js trigger to use latest version ([46558fa](https://github.com/vinayakkulkarni/janak/commit/46558fa911641173d5cfc8a49f982d08e70d58f2))
+
+
+
 ## [1.5.1](https://github.com/vinayakkulkarni/janak/compare/v1.5.0...v1.5.1) (2020-09-13)
 
 
