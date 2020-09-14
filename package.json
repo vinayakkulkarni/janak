@@ -24,8 +24,8 @@
     "test:snapshot": "ava --update-snapshots",
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "lintfix": "npm run lint:eslint:fix && npm run lint:prettier:fix",
-    "lint:eslint": "eslint --ext .js,.ts",
-    "lint:eslint:fix": "eslint --fix --ext .js,.ts",
+    "lint:eslint": "eslint \"{,!(node_modules|template)/**/}*.{js,ts}\"",
+    "lint:eslint:fix": "eslint --fix \"{,!(node_modules|template)/**/}*.{js,ts}\"",
     "lint:prettier": "prettier --check \"{,!(node_modules|template)/**/}*.{js,ts}\"",
     "lint:prettier:fix": "prettier --write \"{,!(node_modules|template)/**/}*.{js,ts}\"",
     "release": "shipjs prepare"
@@ -39,14 +39,15 @@
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",
-    "@commitlint/cli": "^9.1.2",
-    "@commitlint/config-conventional": "^9.1.2",
-    "ava": "^3.11.1",
-    "eslint": "^7.7.0",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "ava": "^3.12.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.9.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "husky": "^4.2.5",
-    "prettier": "^2.0.5",
+    "husky": "^4.3.0",
+    "prettier": "^2.1.1",
     "shipjs": "^0.21.0"
   },
   "engines": {

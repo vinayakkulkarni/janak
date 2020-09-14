@@ -9,23 +9,23 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'releases/v')
     steps:
-      - name: Checkout code
+      - name: Checkout 🛎
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
           ref: main
 
-      - name: Setup node environment
+      - name: Setup node environment 🏗
         uses: actions/setup-node@v1
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org
 
-      - name: Get npm cache directory
+      - name: Get npm cache directory 🛠
         id: npm-cache
         run: echo "::set-output name=dir::$(npm config get cache)"
 
-      - name: Cache node_modules
+      - name: Restore cached node_modules ⚡️
         id: cache
         uses: actions/cache@v2
         with:
@@ -34,11 +34,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Install dependencies
+      - name: Install dependencies 🤖
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm i
 
-      - run: npx shipjs trigger
+      - name: Trigger a new release ⚡️
+        run: npx shipjs trigger
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

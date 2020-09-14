@@ -16,13 +16,6 @@ module.exports = [
     store: true,
   },
   {
-    name: 'username',
-    message: 'What is your GitHub username?',
-    default: '{gitUser.name}',
-    filter: (val) => val.toLowerCase(),
-    store: true,
-  },
-  {
     name: 'email',
     message: 'What is your email?',
     default: '{gitUser.email}',
@@ -33,6 +26,13 @@ module.exports = [
     name: 'website',
     message: 'What is your website?',
     default: '{gitUser.website}',
+    filter: (val) => val.toLowerCase(),
+    store: true,
+  },
+  {
+    name: 'username',
+    message: 'What is your GitHub username?',
+    default: '{gitUser.username}',
     filter: (val) => val.toLowerCase(),
     store: true,
   },

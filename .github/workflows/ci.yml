@@ -18,31 +18,32 @@ jobs:
         node: [14]
 
     steps:
-      - name: Setup node
+      - name: Checkout 🛎
+        uses: actions/checkout@master
+
+      - name: Setup node environment 🏗
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
           registry-url: https://registry.npmjs.org/
 
-      - name: Checkout code
-        uses: actions/checkout@master
-
-      - name: Get npm cache directory
+      - name: Get npm cache directory 🤖
         id: npm-cache
-        run: |
-          echo "::set-output name=dir::$(npm config get cache)"
+        run: echo "::set-output name=dir::$(npm config get cache)"
 
-      - name: Cache node_modules
+      - name: Restore cached node_modules ⚡️
         uses: actions/cache@v2
         with:
           path: ${{ steps.npm-cache.outputs.dir }}
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          restore-keys: ${{ runner.os }}-node-
 
-      - name: Install dependencies
+      - name: Install dependencies 📦
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm install
 
-      - name: Run tests
+      - name: Run linter 👀
+        run: npm run lint
+
+      - name: Run tests 🧪
         run: npm run test

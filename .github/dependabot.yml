@@ -1,7 +1,21 @@
 version: 2
 updates:
 - package-ecosystem: npm
-  directory: "/"
+  directory: '/'
+  schedule:
+    interval: daily
+    time: '21:00'
+  open-pull-requests-limit: 10
+  reviewers:
+    - vinayakkulkarni
+  assignees:
+    - vinayakkulkarni
+  commit-message:
+    prefix: fix
+    prefix-development: chore
+    include: scope
+- package-ecosystem: github-actions
+  directory: '/'
   schedule:
     interval: daily
     time: '21:00'
