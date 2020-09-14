@@ -24,8 +24,8 @@
     "test:snapshot": "ava --update-snapshots",
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "lintfix": "npm run lint:eslint:fix && npm run lint:prettier:fix",
-    "lint:eslint": "eslint --ext .js,.ts",
-    "lint:eslint:fix": "eslint --fix --ext .js,.ts",
+    "lint:eslint": "eslint \"{,!(node_modules|template)/**/}*.{js,ts}\"",
+    "lint:eslint:fix": "eslint --fix \"{,!(node_modules|template)/**/}*.{js,ts}\"",
     "lint:prettier": "prettier --check \"{,!(node_modules|template)/**/}*.{js,ts}\"",
     "lint:prettier:fix": "prettier --write \"{,!(node_modules|template)/**/}*.{js,ts}\"",
     "release": "shipjs prepare"
