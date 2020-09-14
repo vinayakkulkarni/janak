@@ -7,11 +7,9 @@ updates:
     time: '21:00'
   open-pull-requests-limit: 10
   reviewers:
-  - vinayakkulkarni
+    - vinayakkulkarni
   assignees:
-  - vinayakkulkarni
-  labels:
-  - dependencies
+    - vinayakkulkarni
   commit-message:
     prefix: fix
     prefix-development: chore
