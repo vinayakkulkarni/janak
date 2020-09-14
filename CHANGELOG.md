@@ -1,3 +1,24 @@
+## [1.5.3](https://github.com/vinayakkulkarni/janak/compare/v1.5.2...v1.5.3) (2020-09-14)
+
+
+### Bug Fixes
+
+* **base:** update `.eslintrc.js` which was causing conflict ([9d3f85e](https://github.com/vinayakkulkarni/janak/commit/9d3f85e32fd2250af7a0e0bc90ea152a3481f548))
+* **ci:** add check for linting code ([b901e0d](https://github.com/vinayakkulkarni/janak/commit/b901e0d80398ae7ae724758c80e46c7b400d4407))
+* **deps:** update dependencies ([49e648f](https://github.com/vinayakkulkarni/janak/commit/49e648f6fd8dd3e8a40e1c5a9efb82649d215650))
+* **eslint:** move eslint config while scaffolding ([5d8796a](https://github.com/vinayakkulkarni/janak/commit/5d8796ac592340e183071f52b277caafca668543))
+* **eslint:** update eslint config for repo ([e303e34](https://github.com/vinayakkulkarni/janak/commit/e303e346a3f80cbd0eff53c67c639ce12ba8b90e))
+* **shipjs:** update trigger yaml ([0de6d94](https://github.com/vinayakkulkarni/janak/commit/0de6d942fac14a6c98946784fc84f8f45a983acf))
+* update npm scripts ([a8aa516](https://github.com/vinayakkulkarni/janak/commit/a8aa516b3905ffd45cfc742668489f5ac14c669d))
+* update prompts ordering ([c364a85](https://github.com/vinayakkulkarni/janak/commit/c364a850e663110bb71a6abcddd51360c5f89d5c))
+
+
+### Features
+
+* **dependabot:** add support for `github-actions` ecosystem ([58bc666](https://github.com/vinayakkulkarni/janak/commit/58bc666ba5542cd0edf24063be634f3c65ca16e9))
+
+
+
 ## [1.5.2](https://github.com/vinayakkulkarni/janak/compare/v1.5.1...v1.5.2) (2020-09-14)
 
 
