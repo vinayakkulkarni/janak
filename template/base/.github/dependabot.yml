@@ -1,17 +1,15 @@
 version: 2
 updates:
 - package-ecosystem: npm
-  directory: "/"
+  directory: '/'
   schedule:
     interval: daily
     time: '00:00'
   open-pull-requests-limit: 10
   reviewers:
-  - "<%= username %>"
+    - <%= username %>
   assignees:
-  - "<%= username %>"
-  labels:
-  - dependencies
+    - <%= username %>
   commit-message:
     prefix: fix
     prefix-development: chore
