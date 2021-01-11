@@ -31,7 +31,7 @@
     "release": "shipjs prepare"
   },
   "dependencies": {
-    "cac": "^6.6.1",
+    "cac": "^6.7.1",
     "chalk": "^4.1.0",
     "lodash": "^4.17.20",
     "sao": "^1.7.1",
@@ -41,16 +41,16 @@
     "@ava/babel": "^1.0.1",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "ava": "^3.12.1",
+    "ava": "^3.15.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.9.0",
+    "eslint": "^7.17.0",
     "eslint-config-prettier": "^7.1.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "husky": "^4.3.0",
-    "prettier": "^2.1.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "husky": "^4.3.7",
+    "prettier": "^2.2.1",
     "shipjs": "^0.23.0"
   },
   "engines": {
-    "node": ">=12.18.2"
+    "node": ">=14.15.4"
   }
 }
