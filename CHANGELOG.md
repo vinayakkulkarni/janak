@@ -1,3 +1,17 @@
+## [1.5.4](https://github.com/vinayakkulkarni/janak/compare/v1.5.3...v1.5.4) (2021-01-11)
+
+
+### Bug Fixes
+
+* bug with `NPM_AUTH_TOKEN` ([50919e6](https://github.com/vinayakkulkarni/janak/commit/50919e6a6d9b56c26c3c3e571f141804f5d769aa))
+* **deps:** bump actions/setup-node from v1 to v2.1.1 ([3e0a8ca](https://github.com/vinayakkulkarni/janak/commit/3e0a8cafb5946097c98ab0c97f875066a91437d6))
+* **deps:** bump actions/setup-node from v2.1.1 to v2.1.2 ([d06655a](https://github.com/vinayakkulkarni/janak/commit/d06655a50d2c89db50528443c4cb815803266402))
+* **deps:** bump actions/setup-node from v2.1.2 to v2.1.4 ([ce4854c](https://github.com/vinayakkulkarni/janak/commit/ce4854cea4e6920903918ed2efe8fbd648af7e60))
+* **deps:** bump cac from 6.6.1 to 6.7.1 ([9da4170](https://github.com/vinayakkulkarni/janak/commit/9da4170748c047cee83dfb66ac4995007c49e23d))
+* **deps:** bump ini from 1.3.5 to 1.3.8 ([95b821a](https://github.com/vinayakkulkarni/janak/commit/95b821ac18e07be7a7edd7535c52ca17d49628b1))
+
+
+
 ## [1.5.3](https://github.com/vinayakkulkarni/janak/compare/v1.5.2...v1.5.3) (2020-09-14)
 
 
