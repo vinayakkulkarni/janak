@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [14]
+        node: [15]
 
     steps:
       - name: Checkout 🛎
@@ -40,7 +40,7 @@ jobs:
 
       - name: Install dependencies 📦
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: npm ci --prefer-offline --no-audit
 
       - name: Run linter 👀
         run: npm run lint

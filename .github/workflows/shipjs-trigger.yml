@@ -18,7 +18,7 @@ jobs:
       - name: Setup node environment 🏗
         uses: actions/setup-node@v2.1.5
         with:
-          node-version: 14
+          node-version: 15
           registry-url: https://registry.npmjs.org
 
       - name: Get npm cache directory 🛠
@@ -36,7 +36,7 @@ jobs:
 
       - name: Install dependencies 🤖
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci
+        run: npm ci --prefer-offline --no-audit
 
       - name: Trigger a new release ⚡️
         run: npx shipjs trigger
