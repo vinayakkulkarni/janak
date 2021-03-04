@@ -1,3 +1,25 @@
+# [1.6.0](https://github.com/vinayakkulkarni/janak/compare/v1.5.4...v1.6.0) (2021-03-04)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/cache from v2 to v2.1.4 ([54a8818](https://github.com/vinayakkulkarni/janak/commit/54a88180d28bf84d41c2699b1f73dc32f0852b38))
+* **deps:** bump actions/setup-node from v2.1.4 to v2.1.5 ([4507b29](https://github.com/vinayakkulkarni/janak/commit/4507b29ea921cc5cc887f20b2f65fbe3ae634872))
+* **deps:** bump cac from 6.7.1 to 6.7.2 ([b5f1a1b](https://github.com/vinayakkulkarni/janak/commit/b5f1a1b6e7b0d90cd1c90011b7f62d5353d23602))
+* **deps:** bump lodash from 4.17.20 to 4.17.21 ([61bf992](https://github.com/vinayakkulkarni/janak/commit/61bf99237df845d125b498eb96ebcd8fbd13b86e))
+
+
+### Features
+
+* lockfile v2 🥳 ([f25bb31](https://github.com/vinayakkulkarni/janak/commit/f25bb31822483fe569c2482f468f12fa404c238d))
+
+
+### Performance Improvements
+
+* support for npm 7 & node 15 ([ea6e291](https://github.com/vinayakkulkarni/janak/commit/ea6e291327ed81e780e95a9bb17b0858bfe8463a))
+
+
+
 ## [1.5.4](https://github.com/vinayakkulkarni/janak/compare/v1.5.3...v1.5.4) (2021-01-11)
 
 
