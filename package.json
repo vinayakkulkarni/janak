@@ -38,7 +38,7 @@
     "validate-npm-package-name": "^3.0.0"
   },
   "devDependencies": {
-    "@ava/babel": "^1.0.1",
+    "@ava/babel": "^2.0.0",
     "@commitlint/cli": "^12.0.0",
     "@commitlint/config-conventional": "^12.0.0",
     "@vinayakkulkarni/prettier-config-vue": "^1.0.0",
