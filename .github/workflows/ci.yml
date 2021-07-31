@@ -29,8 +29,10 @@ jobs:
           check-latest: true
           cache: 'npm'
 
+      - name: Update npm 🎉
+        run: npm i -g npm@latest
+
       - name: Install dependencies 📦
-        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci --prefer-offline --no-audit --no-optional
 
       - name: Run linter 👀

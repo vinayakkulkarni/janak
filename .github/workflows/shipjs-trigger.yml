@@ -16,27 +16,18 @@ jobs:
           ref: main
 
       - name: Setup node environment 🏗
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v2.3.0
         with:
-          node-version: 15
+          node-version: 16
           registry-url: https://registry.npmjs.org
+          check-latest: true
+          cache: 'npm'
 
-      - name: Get npm cache directory 🛠
-        id: npm-cache
-        run: echo "::set-output name=dir::$(npm config get cache)"
+      - name: Update npm 🎉
+        run: npm i -g npm@latest
 
-      - name: Restore cached node_modules ⚡️
-        id: cache
-        uses: actions/cache@v2.1.5
-        with:
-          path: ${{ steps.npm-cache.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies 🤖
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci --prefer-offline --no-audit
+      - name: Install dependencies 📦
+        run: npm ci --prefer-offline --no-audit --no-optional
 
       - name: Trigger a new release ⚡️
         run: npx shipjs trigger
