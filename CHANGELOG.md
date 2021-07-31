@@ -1,3 +1,12 @@
+## [1.7.1](https://github.com/vinayakkulkarni/janak/compare/v1.7.0...v1.7.1) (2021-07-31)
+
+
+### Bug Fixes
+
+* update install command for ship.js ([a03a804](https://github.com/vinayakkulkarni/janak/commit/a03a80465419a258482adc4e2bce25cce091d733))
+
+
+
 # [1.7.0](https://github.com/vinayakkulkarni/janak/compare/v1.6.0...v1.7.0) (2021-07-31)
 
 

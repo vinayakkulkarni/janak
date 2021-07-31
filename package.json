@@ -1,6 +1,6 @@
 {
   "name": "janak",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Create vue package with a breeze",
   "bin": "cli.js",
   "files": [
