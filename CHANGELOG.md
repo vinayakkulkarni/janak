@@ -1,3 +1,22 @@
+# [1.7.0](https://github.com/vinayakkulkarni/janak/compare/v1.6.0...v1.7.0) (2021-07-31)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/cache from v2.1.4 to v2.1.5 ([e84f8fa](https://github.com/vinayakkulkarni/janak/commit/e84f8fa5430957b104508f15d61be04386250a71))
+* **deps:** bump cac from 6.7.2 to 6.7.3 ([046c412](https://github.com/vinayakkulkarni/janak/commit/046c412d99cb793303a8c88eb9cfcfaaa51808ef))
+* **deps:** bump chalk from 4.1.0 to 4.1.1 ([b76988c](https://github.com/vinayakkulkarni/janak/commit/b76988c49b107101ef4684383c5649cad3a03fc8))
+* have to force install `npm` pkgs ([583f0d2](https://github.com/vinayakkulkarni/janak/commit/583f0d2f912e5d6d0406586580b6f1f07ba4f805))
+* **style:** update ESLint config to use `typescript` parser ([16725ef](https://github.com/vinayakkulkarni/janak/commit/16725efe9a3ddec8eedb1b41d13afd6d00c06305))
+
+
+### Features
+
+* add husky v7 in template 🐶 ([cc9b858](https://github.com/vinayakkulkarni/janak/commit/cc9b858ea132b3cc053fea58a46234707fabf6a9))
+* update CI inbuilt cache env ([0e77fce](https://github.com/vinayakkulkarni/janak/commit/0e77fce171aaaca1134e5336d935c1fc17e31e4f))
+
+
+
 # [1.6.0](https://github.com/vinayakkulkarni/janak/compare/v1.5.4...v1.6.0) (2021-03-04)
 
 
