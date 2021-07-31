@@ -1,75 +1,105 @@
 {
   "name": "<%= name %>",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "<%= description %>",
-  "repository": {
-    "url": "git+https://github.com/<%= username %>/<%= name %>",
-    "type": "git"
-  },
-  "author": {
-    "name": "<%= fullname %>",
-    "email": "<%= email %>",
-    "url": "<%= website %>"
-  },
-  "license": "MIT",
+  "types": "types/<%= name %>.d.ts",
+  "main": "dist/<%= name %>.cjs.js",
+  "module": "dist/<%= name %>.esm.js",
+  "unpkg": "dist/<%= name %>.js",
+  "jsdelivr": "dist/<%= name %>.js",
+  "cdn": "dist/<%= name %>.js",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "scripts": {
     "test": "ava",
     "test:snapshot": "ava --update-snapshots",
-    "build": "npm run bundle && npm run bundle:min",
-    "bundle": "rollup -c build/rollup.config.js",
-    "bundle:min": "rollup -c build/rollup.min.config.js",
-    "lint": "npm run lint:eslint && npm run lint:prettier",
-    "lintfix": "npm run lint:eslint:fix && npm run lint:prettier:fix",
-    "lint:eslint": "eslint \"{,!(node_modules|dist)/**/}*.{js,vue}\"",
-    "lint:eslint:fix": "eslint --fix \"{,!(node_modules|dist)/**/}*.{js,vue}\"",
-    "lint:prettier": "prettier --check \"{,!(node_modules|dist)/**/}*.{js,vue}\"",
-    "lint:prettier:fix": "prettier --write \"{,!(node_modules|dist)/**/}*.{js,vue}\"",
+    "build": "rimraf dist && npm run bundle && npm run bundle:min",
+    "bundle": "rollup -c build/rollup.config.ts",
+    "bundle:min": "rollup -c build/rollup.min.config.ts",
+    "lint": "npm run lint:prettier && npm run lint:eslint && npm run lint:css",
+    "lintfix": "npm run lint:prettier:fix && npm run lint:eslint:fix && npm run lint:css:fix",
+    "lint:js": "npm run lint:eslint && npm run lint:prettier",
+    "lint:eslint": "eslint \"{,!(node_modules|dist)/**/}*.{js,ts,vue}\" --ignore-path .gitignore",
+    "lint:eslint:fix": "eslint --fix \"{,!(node_modules|dist)/**/}*.{js,ts,vue}\" --ignore-path .gitignore",
+    "lint:prettier": "prettier --check \"{,!(node_modules|dist)/**/}*.{js,ts,vue}\" --ignore-path .gitignore",
+    "lint:prettier:fix": "prettier --write \"{,!(node_modules|dist)/**/}*.{js,ts,vue}\" --ignore-path .gitignore",
+    "lint:css": "stylelint \"{,!(node_modules|dist)/**/}*.{css,scss,vue}\" --ignore-path .gitignore",
+    "lint:css:fix": "stylelint --fix \"{,!(node_modules|dist)/**/}*.{css,scss,vue}\" --ignore-path .gitignore",
+    "lint-staged": "lint-staged",
     <%_ if (docs === 'vuepress') { _%>
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     <%_ } _%>
     "release": "shipjs prepare"
   },
-  "dependencies": {
-    "@vue/composition-api": "^1.0.0-beta.13"
+  "peerDependencies": {
+    "@vue/composition-api": "^1.0.4"
   },
   "devDependencies": {
-    "@ava/babel": "^1.0.1",
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "@rollup/plugin-commonjs": "^15.0.0",
-    "@rollup/plugin-babel": "^5.2.1",
-    "@vue/test-utils": "^1.1.0",
+    "@ava/babel": "^2.0.0",
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@rollup/plugin-alias": "^3.1.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-beep": "^0.2.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-sucrase": "^4.0.0",
+    "@types/node": "^16.4.8",
+    "@vue/composition-api": "^1.0.4",
+    "@vue/test-utils": "^1.2.2",
     "ava": "^3.12.1",
-    "babel-eslint": "^10.1.0",
-    "babel-plugin-module-resolver": "^4.0.0",
-    "eslint": "^7.9.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-config-vue": "^2.0.2",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-vue": "^6.2.2",
-    "husky": "^4.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsdoc": "^36.0.6",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.15.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.1",
     "jsdom": "^16.4.0",
     "jsdom-global": "^3.0.2",
-    "prettier": "^2.1.1",
+    "prettier": "^2.3.2",
     "require-extension-hooks": "^0.3.3",
     "require-extension-hooks-babel": "^1.0.0",
     "require-extension-hooks-vue": "^3.0.0",
-    "rollup": "^2.26.11",
+    "rollup": "^2.55.1",
+    "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-vue": "^5.1.6",
-    "shipjs": "^0.21.0",
-    "vue": "^2.6.12",
+    "rollup-plugin-vue": "5.1.9",
+    "sass": "^1.36.0",
+    "shipjs": "^0.23.3",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^22.0.0",
+    "typescript": "^4.3.5",
+    "vue": "^2.6.14",
     <%_ if (docs === 'vuepress') { _%>
-    "vuepress": "^1.5.3",
+    "vuepress": "^1.8.2",
     <%_ } _%>
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "^2.6.14"
   },
+  "keywords": [
+    "<%= name %>"
+  ],
+  "author": {
+    "name": "<%= fullname %>",
+    "email": "<%= email %>",
+    "url": "<%= website %>"
+  },
+  "license": "MIT",
+  "repository": {
+    "url": "git+https://github.com/<%= username %>/<%= name %>",
+    "type": "git"
+  },
+  "private": false,
+  "sideEffects": false,
   "bugs": {
     "url": "https://github.com/<%= username %>/<%= name %>/issues"
   },
