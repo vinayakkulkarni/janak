@@ -56,7 +56,10 @@ module.exports = {
   async completed() {
     this.gitInit();
 
-    await this.npmInstall({ npmClient: 'npm' });
+    await this.npmInstall({
+      npmClient: 'npm',
+      installArgs: ['--force', '--prefer-offline', '--no-audit'],
+    });
 
     const chalk = this.chalk;
     const isNewFolder = this.outDir !== process.cwd();
