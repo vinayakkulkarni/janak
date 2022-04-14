@@ -18,13 +18,10 @@ jobs:
       - name: Setup node environment 🏗
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 17
           registry-url: https://registry.npmjs.org
           check-latest: true
           cache: 'npm'
-
-      - name: Update npm 🎉
-        run: npm i -g npm@latest
 
       - name: Install dependencies 📦
         run: npm ci --prefer-offline --no-audit --no-optional

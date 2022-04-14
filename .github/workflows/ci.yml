@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [16]
+        node: [17]
 
     steps:
       - name: Checkout 🛎
@@ -29,11 +29,11 @@ jobs:
           check-latest: true
           cache: 'npm'
 
-      - name: Update npm 🎉
-        run: npm i -g npm@latest
-
       - name: Install dependencies 📦
         run: npm ci --prefer-offline --no-audit --no-optional
 
       - name: Run linter 👀
         run: npm run lint
+
+      - name: Run test 🥳
+        run: npm run test
