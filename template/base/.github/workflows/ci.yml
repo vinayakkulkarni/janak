@@ -1,40 +1,60 @@
-name: ci
+name: 'Continuous Integration'
 
 on:
   push:
     branches:
       - main
-  pull_request:
+  pull_request_target:
     branches:
       - main
+
+permissions:
+  checks: write
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request_target' && github.head_ref || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   ci:
     runs-on: ${{ matrix.os }}
 
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest]
-        node: [16]
+        node: [18]
 
     steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@master
+      - name: Check out repository ✨
+        if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' || github.event_name == 'pull_request_target' && github.actor != 'dependabot[bot]' }}
+        uses: actions/checkout@v3
 
-      - name: Setup node environment 🏗
-        uses: actions/setup-node@v2.3.0
+      - name: Check out repository 🎉 (dependabot)
+        if: ${{ github.event_name == 'pull_request_target' }}
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Setup node env 📦
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-          registry-url: https://registry.npmjs.org/
+          registry-url: https://registry.npmjs.org
           check-latest: true
           cache: 'npm'
 
-      - name: Install dependencies 📦
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci --prefer-offline --no-audit --no-optional
+      - name: Install dependencies 🚀
+        run: npm ci --prefer-offline --no-audit
 
-      - name: Run linter 👀
-        run: npm run lint
-
-      - name: Run tests 🧪
-        run: npm run test
+      - name: Run linter(s) 👀
+        uses: wearerequired/lint-action@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          continue_on_error: false
+          git_name: github-actions[bot]
+          git_email: github-actions[bot]@users.noreply.github.com
+          auto_fix: false
+          prettier: true
+          prettier_extensions: js,ts,json

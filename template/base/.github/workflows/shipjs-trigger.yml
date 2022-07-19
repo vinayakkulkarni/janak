@@ -9,14 +9,22 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'releases/v')
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout 🛎
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
           ref: main
 
-      - name: Setup node env 📦
-        uses: actions/setup-node@v1
+      - name: Setup node environment 🏗
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.org
+          check-latest: true
+          cache: 'npm'
+
+      - name: Install dependencies 📦
+        run: npm ci --prefer-offline --no-audit
 
       - name: Perform a new release 🚨
         run: npx shipjs trigger

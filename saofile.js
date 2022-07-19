@@ -29,7 +29,7 @@ module.exports = {
           // If we use `package.json` directly
           // Then `template` folder will be treated as a package too, which isn't safe
           '_package.json': 'package.json',
-          'eslintrc.js': '.eslintrc.js',
+          'eslintrc.cjs': '.eslintrc.cjs',
         },
       },
     ];
