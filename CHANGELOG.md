@@ -1,3 +1,26 @@
+## [1.7.2](https://github.com/vinayakkulkarni/janak/compare/v1.7.1...v1.7.2) (2022-07-19)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/setup-node from 2.3.0 to 2.4.0 ([293aaf0](https://github.com/vinayakkulkarni/janak/commit/293aaf0ba34bc2bd3ce85959ce8d93f1b42d2111))
+* **deps:** bump actions/setup-node from 2.4.0 to 2.4.1 ([0dac4dc](https://github.com/vinayakkulkarni/janak/commit/0dac4dc3372b2c3605ce59aa522bc9c516f91b4a))
+* **deps:** bump actions/setup-node from 2.4.1 to 2.5.0 ([f2b3ef7](https://github.com/vinayakkulkarni/janak/commit/f2b3ef7435adf62484af44b75468f17776d55085))
+* **deps:** bump actions/setup-node from 2.5.0 to 2.5.1 ([ef015ca](https://github.com/vinayakkulkarni/janak/commit/ef015ca16b9c4a7c03cdc30ed2d6480d03b8978e))
+* **deps:** bump actions/setup-node from 2.5.1 to 3 ([5ac3d17](https://github.com/vinayakkulkarni/janak/commit/5ac3d17bb0ac8c8e87eb48fe54bf83e722405c18))
+* **deps:** bump ansi-regex from 3.0.0 to 3.0.1 ([e0d5b5d](https://github.com/vinayakkulkarni/janak/commit/e0d5b5d4cb9f35325eeb39a2ca52065863312140))
+* **deps:** bump axios from 0.21.1 to 0.21.4 ([6df8d5b](https://github.com/vinayakkulkarni/janak/commit/6df8d5b21ba1f6c1731e3d67df7e1da4ceb977d6))
+* **deps:** bump cac from 6.7.11 to 6.7.12 ([fb7f3db](https://github.com/vinayakkulkarni/janak/commit/fb7f3db5481bb94b426941d8c4b7b6d409238c6c))
+* **deps:** bump cac from 6.7.3 to 6.7.8 ([34cd8d5](https://github.com/vinayakkulkarni/janak/commit/34cd8d522b1d94903c5b5fa0329791e272cbb21e))
+* **deps:** bump cac from 6.7.8 to 6.7.11 ([3edc187](https://github.com/vinayakkulkarni/janak/commit/3edc187b7e2efe31289fcd326349a5290c7d19e6))
+* **deps:** bump follow-redirects from 1.14.1 to 1.14.8 ([c0584e7](https://github.com/vinayakkulkarni/janak/commit/c0584e75c47ba45d098b3ad00b0962f989f48f16))
+* **deps:** bump minimist from 1.2.5 to 1.2.6 ([2451a4a](https://github.com/vinayakkulkarni/janak/commit/2451a4a793c23a1e9b8b6554871ded09bce827b2))
+* **deps:** bump node-fetch from 2.6.1 to 2.6.7 ([0827822](https://github.com/vinayakkulkarni/janak/commit/082782241ff072bb0712b7f2a7e092e667a1574e))
+* **deps:** bump trim-off-newlines from 1.0.1 to 1.0.3 ([252559f](https://github.com/vinayakkulkarni/janak/commit/252559feed55045732d7f5381a396e55230d4aa3))
+* extra comma ([b373b98](https://github.com/vinayakkulkarni/janak/commit/b373b988915a36b1827efe3a1a09543c15e9c9e2))
+
+
+
 ## [1.7.1](https://github.com/vinayakkulkarni/janak/compare/v1.7.0...v1.7.1) (2021-07-31)
 
 
