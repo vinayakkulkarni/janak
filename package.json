@@ -42,7 +42,7 @@
     "ava": "^3.15.0",
     "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-jsdoc": "^40.0.1",
+    "eslint-plugin-jsdoc": "^41.1.1",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
