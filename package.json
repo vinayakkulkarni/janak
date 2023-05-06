@@ -25,7 +25,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "cac": "^6.7.12",
+    "cac": "^6.7.14",
     "chalk": "^4.1.2",
     "lodash": "^4.17.21",
     "sao": "^1.7.1",
@@ -33,21 +33,21 @@
   },
   "devDependencies": {
     "@ava/babel": "^2.0.0",
-    "@commitlint/cli": "^17.0.3",
-    "@commitlint/config-conventional": "^17.0.3",
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
     "@types/node": "^20.1.0",
-    "@typescript-eslint/eslint-plugin": "^5.30.7",
-    "@typescript-eslint/parser": "^5.30.7",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
     "@vinayakkulkarni/prettier-config-vue": "^1.0.0",
     "ava": "^3.15.0",
-    "eslint": "^8.20.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-jsdoc": "^43.1.1",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-jsdoc": "^43.2.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1",
-    "shipjs": "^0.26.1"
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "shipjs": "^0.26.3"
   },
   "keywords": [
     "Vue Scaffolding",
