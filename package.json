@@ -35,7 +35,7 @@
     "@ava/babel": "^2.0.0",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@types/node": "^18.0.6",
+    "@types/node": "^20.1.0",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
     "@vinayakkulkarni/prettier-config-vue": "^1.0.0",
