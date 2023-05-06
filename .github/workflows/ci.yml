@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - dev
   pull_request_target:
     branches:
       - main
+      - dev
 
 permissions:
   checks: write
@@ -18,38 +20,25 @@ concurrency:
 
 jobs:
   ci:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest]
-        node: [18]
-
+    runs-on: ubuntu-latest
     steps:
       - name: Check out repository ✨
         if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' || github.event_name == 'pull_request_target' && github.actor != 'dependabot[bot]' }}
         uses: actions/checkout@v3
-
       - name: Check out repository 🎉 (dependabot)
         if: ${{ github.event_name == 'pull_request_target' }}
         uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-
       - name: Setup node env 📦
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v3.6.0
         with:
-          node-version: ${{ matrix.node }}
-          registry-url: https://registry.npmjs.org
+          node-version-file: '.nvmrc'
           check-latest: true
           cache: 'npm'
 
       - name: Install dependencies 🚀
         run: npm ci --prefer-offline --no-audit
-
-      - name: Run test 🥳
-        run: npm run test
 
       - name: Run linter(s) 👀
         uses: wearerequired/lint-action@v2
@@ -59,5 +48,12 @@ jobs:
           git_name: github-actions[bot]
           git_email: github-actions[bot]@users.noreply.github.com
           auto_fix: false
+          stylelint: true
+          eslint: true
+          eslint_extensions: js,ts
           prettier: true
-          prettier_extensions: js,ts,json
+          prettier_extensions: js,ts
+          neutral_check_on_warning: true
+
+      - name: Run tests 🧪
+        run: npm run test
