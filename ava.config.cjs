@@ -3,5 +3,5 @@ module.exports = {
   files: ['./test/*.test.js', '!template'],
   babel: true,
   tap: false,
-  verbose: true
-}
+  verbose: true,
+};
